@@ -1,119 +1,115 @@
 <template>
   <div class="home">
-    <p class="title">选择你的性别</p>
-    <div class="gender-select-box">
-      <div class="item-box">
-        <p :class="['gender-name', userData.gender == 'man' ? 'active' : '']">男</p>
-        <div :class="['image-bg',  userData.gender == 'man' ? 'active' : '']" @click="handleClickGender('man')">
-          <img :src="userData.gender == 'man' ? 'https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png' : 'https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png'"/>
-        </div>
-      </div>
-      <div class="item-box">
-        <p :class="['gender-name',  userData.gender == 'woman' ? 'active' : '']">女</p>
-        <div :class="['image-bg',  userData.gender == 'woman' ? 'active' : '']" @click="handleClickGender('woman')">
-          <img :src="userData.gender == 'woman' ? 'https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/woman.png' : 'https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/woman.png'"/>
-        </div>
+    <p class="title">求职意向</p>
+    <div class="input-box">
+      <p class="input-title">职类</p>
+      <div class="right-input">
+        <div class="left-icon" @click="handleClickClass(-1)"></div>
+        <div class="input">{{intention.class}}</div>
+        <div class="right-icon" @click="handleClickClass(1)"></div>
       </div>
     </div>
     <div class="input-box">
-      <p class="input-title">名字</p>
+      <p class="input-title">城市</p>
       <div class="right-input">
-        <div class="input">{{userData.name}}</div>
-        <div class="right-icon-max" @click="handleClickName"></div>
+        <div class="left-icon" @click="handleClickCity(-1)"></div>
+        <div class="input">{{intention.city}}</div>
+        <div class="right-icon" @click="handleClickCity(1)"></div>
       </div>
     </div>
     <div class="input-box">
-      <p class="input-title">学历</p>
+      <p class="input-title">级别</p>
       <div class="right-input">
-        <div class="left-icon" @click="handleClickEducation(-1)"></div>
-        <div class="input">{{userData.education}}</div>
-        <div class="right-icon" @click="handleClickEducation(1)"></div>
-      </div>
-    </div>
-    <div class="input-box">
-      <p class="input-title">专业</p>
-      <div class="right-input">
-        <div class="left-icon" @click="handleClickMajor(-1)"></div>
-        <div class="input">{{userData.major}}</div>
-        <div class="right-icon" @click="handleClickMajor(1)"></div>
+        <div class="left-icon" @click="handleClickSalary(-1)"></div>
+        <div class="input">{{intention.salary}}</div>
+        <div class="right-icon" @click="handleClickSalary(1)"></div>
       </div>
     </div>
     <affirm-button text="确定" style="margin-top: 42px" @click.native="handleClickAffirm"/>
+    <message-box v-if="showMessage" :data="textData"></message-box>
   </div>
 </template>
 
 <script>
-  import randomName from "../assets/json/name.json"
   import AffirmButton from "../components/AffirmButton";
+  import {jobDramaData} from "./drama.json"
+  import MessageBox from "../components/MessageBox";
+  import domeDrama from "./drama_dom.json";
   export default {
-    name: 'Home',
-    components: {AffirmButton},
+    name: 'Intention',
+    components: {AffirmButton, MessageBox},
     data(){
       return {
-        userData: {
-          name: "马晨晨",
-          gender: "woman",
-          education: "本科",
-          major: "计算机"
+        intention: {
+          class: "程序员",
+          city: "北京",
+          salary: "初级"
         },
-        educationList: ['专科', '本科', '硕士', '博士'],
-        majorList: ['计算机', '视觉传达', '人力资源', '心理学'],
-        initEducationIndex: 1,
-        initMajorIndex: 1,
+        classList: ['程序员', '设计', '人事', '产品经理'],
+        cityList: ['北京', '杭州', '广州', '天津'],
+        salaryList: ["初级","中级","高级"],
+        initClassIndex: 0,
+        initCityIndex: 0,
+        initSalaryIndex: 0,
+        jobDramaData,
+        showMessage: false,
+        textData: {
+          text: "真·人工帮你搜索职位中...",
+          name: "世伟",
+          image: "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png"
+        }
       }
     },
     computed: {
 
     },
     mounted() {
-
-
+      if(this.$store.state.isDemo){
+        this.jobDramaData = domeDrama.jobDramaData
+      }
     },
     methods:{
-      //选择性别
-      handleClickGender(type){
-        this.userData.gender = type
-        this.$store.state.storeAudioList && this.$store.state.storeAudioList.key && this.$store.state.storeAudioList.key.play()
-      },
-      //随机生成名字
-      handleClickName(){
-        let surname = randomName.name[Math.floor(Math.random() * randomName.name.length)]
-        let name =  randomName.surname[Math.floor(Math.random() * randomName.surname.length)]
-        this.userData.name = surname + name;
-        let dom = document.querySelector(".right-icon-max")
-        dom.className = 'spin right-icon-max'
-        setTimeout(()=>{
-          dom.className = 'right-icon-max'
-        },1000)
-        this.$store.state.storeAudioList && this.$store.state.storeAudioList.key && this.$store.state.storeAudioList.key.play()
-      },
-      //选择学历
-      handleClickEducation(num){
-        this.initMajorIndex = this.initMajorIndex + num
-        if(this.initMajorIndex < 0){
-          this.initMajorIndex = 3
-        }else if(this.initMajorIndex > 3){
-          this.initMajorIndex = 0
+
+      //选择职类
+      handleClickClass(num){
+        this.initClassIndex = this.initClassIndex + num
+        if(this.initClassIndex < 0){
+          this.initClassIndex = 3
+        }else if(this.initClassIndex > 3){
+          this.initClassIndex = 0
         }
-        this.userData.education = this.educationList[this.initMajorIndex]
-        this.$store.state.storeAudioList && this.$store.state.storeAudioList.key && this.$store.state.storeAudioList.key.play()
+        this.intention.class = this.classList[this.initClassIndex]
       },
-      //选择专业
-      handleClickMajor(num){
-        this.initMajorIndex = this.initMajorIndex + num
-        if(this.initMajorIndex < 0){
-          this.initMajorIndex = 3
-        }else if(this.initMajorIndex > 3){
-          this.initMajorIndex = 0
+      //选择城市
+      handleClickCity(num){
+        this.initCityIndex = this.initCityIndex + num
+        if(this.initCityIndex < 0){
+          this.initCityIndex = 3
+        }else if(this.initCityIndex > 3){
+          this.initCityIndex = 0
         }
-        this.userData.major = this.majorList[this.initMajorIndex]
-        this.$store.state.storeAudioList && this.$store.state.storeAudioList.key && this.$store.state.storeAudioList.key.play()
+        this.intention.city = this.cityList[this.initCityIndex]
+      },
+      //选择薪资
+      handleClickSalary(num){
+        this.initSalaryIndex = this.initSalaryIndex + num
+        if(this.initSalaryIndex < 0){
+          this.initSalaryIndex = 2
+        }else if(this.initSalaryIndex > 2){
+          this.initSalaryIndex = 0
+        }
+        this.intention.salary = this.salaryList[this.initSalaryIndex]
       },
       //确认
       handleClickAffirm(){
-        this.$store.commit("setDramaUserInfo", this.userData)
         this.$store.state.storeAudioList && this.$store.state.storeAudioList.key && this.$store.state.storeAudioList.key.play()
-        this.$router.replace("/one")
+        this.$store.commit("setDramaIntention", this.intention)
+        let jobs = this.jobDramaData.jobs[this.intention.class][this.intention.salary]
+        this.$store.commit("setDramaJobs", jobs)
+        this.showMessage = true
+        setTimeout(() => {
+           this.$router.replace("/jobs")
+        }, 1000)
       }
     }
   }
@@ -124,7 +120,7 @@
     width: 100%;
     height: 100%;
     padding-top: 80px;
-    font-family: FZXS24--GB1-0, FZXS24--GB1 !important;
+    font-family: FZXS24--GB1-0, FZXS24--GB1;
     .title{
       font-size: 16px;
       font-weight: normal;
@@ -223,6 +219,7 @@
           background-size: 100%;
           margin-right: 29px;
           margin-left: 10px;
+
         }
         .left-icon{
           width: 20px;
@@ -230,6 +227,7 @@
           background-image: url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/left.png");
           background-size: 100%;
           margin-right: 10px;
+
         }
       }
 

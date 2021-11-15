@@ -1,13 +1,14 @@
 <template>
   <div class="keyboard-box">
     <div class="direction-box">
-      <div class="up-box direction-item" @touchstart.prevent="handleTouchstartItem('up')" @touchend.prevent="handleTouchendItem('up')"></div>
-      <div class="down-box direction-item" @touchstart.prevent="handleTouchstartItem('down')" @touchend.prevent="handleTouchendItem('down')"></div>
-      <div class="left-box direction-item" @touchstart.prevent="handleTouchstartItem('left')" @touchend.prevent="handleTouchendItem('left')"></div>
-      <div class="right-box direction-item" @touchstart.prevent="handleTouchstartItem('right')" @touchend.prevent="handleTouchendItem('right')"></div>
+      <div class="up-box direction-item" @touchstart.stop.prevent="handleTouchstartItem('up')" @touchend.stop.prevent="handleTouchendItem('up')"></div>
+      <div class="down-box direction-item" @touchstart.stop.prevent="handleTouchstartItem('down')" @touchend.stop.prevent="handleTouchendItem('down')"></div>
+      <div class="left-box direction-item" @touchstart.stop.prevent="handleTouchstartItem('left')" @touchend.stop.prevent="handleTouchendItem('left')"></div>
+      <div class="right-box direction-item" @touchstart.stop.prevent="handleTouchstartItem('right')" @touchend.stop.prevent="handleTouchendItem('right')"></div>
     </div>
     <div class="operation-box">
-
+      <div class="a-box" @touchstart.stop.prevent="handleTouchstartItem('a')" @touchend.stop.prevent="handleTouchendItem('a')"></div>
+      <div class="b-box" @touchstart.stop.prevent="handleTouchstartItem('b')" @touchend.stop.prevent="handleTouchendItem('b')"></div>
     </div>
   </div>
 </template>
@@ -17,12 +18,15 @@
     name: "KeyboardBox",
     methods: {
       handleTouchstartItem(type){
+        this.$store.state.storeAudioList && this.$store.state.storeAudioList.key && this.$store.state.storeAudioList.key.play()
         let box = document.querySelector(`.${type}-box`)
-        box.style.backgroundImage = `url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/game-content/${type}-active.png")`
+        box && (box.style.backgroundImage = `url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/game-content/${type}-active.png")`)
+        this.$emit("on-keyboard", {type, keyType: "down"})
       },
       handleTouchendItem(type){
         let box = document.querySelector(`.${type}-box`)
-        box.style.backgroundImage = `url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/game-content/${type}.png")`
+        box && (box.style.backgroundImage = `url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/game-content/${type}.png")`)
+        this.$emit("on-keyboard", {type, keyType: "up"})
       }
     }
   }
@@ -73,6 +77,19 @@
   }
   .operation-box{
     display: flex;
+    padding-right: 30px;
+    .a-box{
+      width: 55px;
+      height: 34px;
+      background-size: 100%;
+      background-image: url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/game-content/a.png");
+    }
+    .b-box{
+      width: 55px;
+      height: 34px;
+      background-image: url("https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/game-content/b.png");
+      background-size: 100%;
+    }
   }
 }
 </style>

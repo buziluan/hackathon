@@ -1,0 +1,827 @@
+{
+  "schoolDramaData": {
+    "beforeText": [
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "左右移动接收🌟，同时注意炸弹，学历不同通关分数不同，时间有限好好把握，你的分数对你很重要，加油！！！ 按A(B)键继续"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键开始游戏"
+      }
+    ],
+    "beforeTextIndex": 0,
+    "gameScore": 0,
+    "passScore": {
+      "专科": 100,
+      "本科": 150,
+      "硕士": 200,
+      "博士": 250
+    },
+    "baseScore": {
+      "专科": 0,
+      "本科": 100,
+      "硕士": 200,
+      "博士": 500
+    },
+    "course": {
+      "计算机": [
+        {
+          "name": "马克思主义",
+          "score": 200
+        },
+        {
+          "name": "毛泽东思想",
+          "score": 200
+        },
+        {
+          "name": "大学数学",
+          "score": 200
+        },
+        {
+          "name": "计算机导论",
+          "score": 200
+        },
+        {
+          "name": "面向对象编程",
+          "score": 300
+        },
+        {
+          "name": "数据结构",
+          "score": 300
+        },
+        {
+          "name": "计算机网络",
+          "score": 300
+        },
+        {
+          "name": "算法",
+          "score": 400
+        },
+        {
+          "name": "操作系统",
+          "score": 400
+        }
+      ],
+      "视觉传达": [
+        {
+          "name": "马克思主义",
+          "score": 200
+        },
+        {
+          "name": "毛泽东思想",
+          "score": 200
+        },
+        {
+          "name": "大学数学",
+          "score": 200
+        },
+        {
+          "name": "设计应用",
+          "score": 200
+        },
+        {
+          "name": "文字设计",
+          "score": 300
+        },
+        {
+          "name": "图形设计",
+          "score": 300
+        },
+        {
+          "name": "设计创意",
+          "score": 300
+        },
+        {
+          "name": "设计传播",
+          "score": 400
+        },
+        {
+          "name": "版式设计",
+          "score": 400
+        }
+      ],
+      "人力资源": [
+        {
+          "name": "马克思主义",
+          "score": 200
+        },
+        {
+          "name": "毛泽东思想",
+          "score": 200
+        },
+        {
+          "name": "大学数学",
+          "score": 200
+        },
+        {
+          "name": "组织与管理",
+          "score": 200
+        },
+        {
+          "name": "会计",
+          "score": 300
+        },
+        {
+          "name": "信息化管理",
+          "score": 300
+        },
+        {
+          "name": "心理与管理",
+          "score": 300
+        },
+        {
+          "name": "招聘与录用",
+          "score": 400
+        },
+        {
+          "name": "劳动法规",
+          "score": 400
+        }
+      ],
+      "心理学": [
+        {
+          "name": "马克思主义",
+          "score": 200
+        },{
+          "name": "毛泽东思想",
+          "score": 200
+        },{
+          "name": "大学数学",
+          "score": 200
+        },{
+          "name": "心理导论",
+          "score": 200
+        },{
+          "name": "实验心理学",
+          "score": 300
+        },{
+          "name": "心理统计",
+          "score": 300
+        },{
+          "name": "社会心理学",
+          "score": 300
+        },{
+          "name": "人格心理",
+          "score": 400
+        },{
+          "name": "法制心理学",
+          "score": 400
+        }
+      ]
+    },
+    "negative": [
+      {
+        "name": "逃课",
+        "score": -100
+      },
+      {
+        "name": "挂科",
+        "score": -200
+      },
+      {
+        "name": "作弊",
+        "score": -300
+      },
+      {
+        "name": "留级",
+        "score": -400
+      }
+    ],
+    "afterText": [
+
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "呜呼，终于毕业了，要开始找工作了，去问问学姐学长找工作的事情吧。"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "学姐学长，你们当时毕业之后怎么找的工作呀"
+      },
+      {
+        "name": "学姐",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/woman.png",
+        "text": "我们当时用的BOSS直聘，你也可以试试"
+      },
+      {
+        "name": "学长",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "学姐说的对"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "BOSS怎么不让我注册呀"
+      },
+      {
+        "name": "学长",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "哦对，BOSS最近被安排了。给你推荐一个新款求职APP《超级简历》，你可以试试"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "嗯，感谢学长学姐"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "超级简历APP下载..."
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键开始你的求职之旅吧！！！"
+      }
+    ],
+    "afterTextIndex": 0,
+    "backupsAfterText": [
+
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "呜呼，终于毕业了，要开始找工作了，去问问学姐学长找工作的事情吧。"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "学姐学长，你们当时毕业之后怎么找的工作呀"
+      },
+      {
+        "name": "学姐",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/woman.png",
+        "text": "我们当时用的BOSS直聘，你也可以试试"
+      },
+      {
+        "name": "学长",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "学姐说的对"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "BOSS怎么不让我注册呀"
+      },
+      {
+        "name": "学长",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "哦对，BOSS最近被安排了。给你推荐一个新款求职APP《超级简历》，你可以试试"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "嗯，感谢学长学姐"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "超级简历APP下载..."
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键开始你的求职之旅吧！！！"
+      }
+    ],
+    "gameTime": 20
+  },
+  "jobDramaData": {
+    "jobs": {
+      "程序员": {
+        "初级": [
+          {
+            "name": "初级前端工程师",
+            "question": ["vue", "html", "css", "js", "nginx"],
+            "city": {
+              "北京":["8k-10k", "8k"],
+              "杭州":["7k-9k", "7k"],
+              "广州":["6k-8k", "6k"],
+              "天津":["5k-6k", "5k"]
+            }
+          },{
+            "name": "初级算法工程师",
+            "question": ["深度学习算法", "自然语言处理", "机器学习算法", "推荐算法", "搜索算法"],
+            "city": {
+              "北京":["8k-10k", "8k"],
+              "杭州":["7k-9k", "7k"],
+              "广州":["6k-8k", "6k"],
+              "天津":["5k-6k", "5k"]
+            }
+          },{
+            "name": "初级后端工程师",
+            "question": ["python", "go", "算法", "计算机网络", "操作系统"],
+            "city": {
+              "北京":["8k-10k", "8k"],
+              "杭州":["7k-9k", "7k"],
+              "广州":["6k-8k", "6k"],
+              "天津":["5k-6k", "5k"]
+            }
+          }],
+        "中级": [
+          {
+            "name": "中级前端工程师",
+            "question": ["vue", "html", "css", "js", "nginx"],
+            "city": {
+              "北京":["15k-20k", "15k"],
+              "杭州":["12k-18k", "13k"],
+              "广州":["10k-14k", "11k"],
+              "天津":["7k-12k", "8k"]
+            }
+          },{
+            "name": "中级算法工程师",
+            "question": ["深度学习算法", "自然语言处理", "机器学习算法", "推荐算法", "搜索算法"],
+            "city": {
+              "北京":["15k-20k", "15k"],
+              "杭州":["12k-18k", "13k"],
+              "广州":["10k-14k", "11k"],
+              "天津":["7k-12k", "8k"]
+            }
+          },{
+            "name": "中级后端工程师",
+            "question": ["python", "go", "算法", "计算机网络", "操作系统"],
+            "city": {
+              "北京":["15k-20k", "15k"],
+              "杭州":["12k-18k", "13k"],
+              "广州":["10k-14k", "11k"],
+              "天津":["7k-12k", "8k"]
+            }
+          }],
+        "高级": [
+          {
+            "name": "高级前端工程师",
+            "question": ["vue", "html", "css", "js", "nginx"],
+            "city": {
+              "北京":["18k-25k", "20k"],
+              "杭州":["15k-22k", "18k"],
+              "广州":["12k-18k", "15k"],
+              "天津":["10k-15k", "13k"]
+            }
+          },{
+            "name": "高级算法工程师",
+            "question": ["深度学习算法", "自然语言处理", "机器学习算法", "推荐算法", "搜索算法"],
+            "city": {
+              "北京":["18k-25k", "20k"],
+              "杭州":["15k-22k", "18k"],
+              "广州":["12k-18k", "15k"],
+              "天津":["10k-15k", "13k"]
+            }
+          },{
+            "name": "高级后端工程师",
+            "question": ["python", "go", "算法", "计算机网络", "操作系统"],
+            "city": {
+              "北京":["18k-25k", "20k"],
+              "杭州":["15k-22k", "18k"],
+              "广州":["12k-18k", "15k"],
+              "天津":["10k-15k", "13k"]
+            }
+          }]
+      },
+      "设计": {
+        "初级": [
+          {
+            "name": "初级室内设计",
+            "question": ["ps", "CAD", "3D设计", "室内设计", "家居设计"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          },{
+            "name": "初级服装设计",
+            "question": ["ps", "CAD", "AI", "美工", "图案设计"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          },{
+            "name": "初级UI设计",
+            "question": ["ps", "CAD", "视觉设计", "HTML", "手绘"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          }
+        ],
+        "中级": [
+          {
+            "name": "中级室内设计",
+            "question": ["ps", "CAD", "3D设计", "室内设计", "家居设计"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }
+          },{
+            "name": "中级服装设计",
+            "question": ["ps", "CAD", "AI", "美工", "图案设计"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }
+          },{
+            "name": "中级UI设计",
+            "question": ["ps", "CAD", "视觉设计", "HTML", "手绘"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }
+          }
+        ],
+        "高级": [
+          {
+            "name": "高级室内设计",
+            "question": ["ps", "CAD", "3D设计", "室内设计", "家居设计"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          },{
+            "name": "高级服装设计",
+            "question": ["ps", "CAD", "AI", "美工", "图案设计"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          },{
+            "name": "高级UI设计",
+            "question": ["ps", "CAD", "视觉设计", "HTML", "手绘"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          }
+        ]
+      },
+      "人事": {
+        "初级": [
+          {
+            "name": "初级人事专员",
+            "question": ["管理经验", "招聘", "绩效管理", "员工关系", "培训"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          },{
+            "name": "初级行政人事",
+            "question": ["人力资源管理", "企业文化", "招聘", "培训", "薪酬福利"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          },{
+            "name": "初级HRBP",
+            "question": ["HRBP经验", "招聘", "人才发展", "组织发展", "人力资源管理"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          }
+        ],
+        "中级": [
+          {
+            "name": "中级人事专员",
+            "question": ["管理经验", "招聘", "绩效管理", "员工关系", "培训"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }
+          },{
+            "name": "中级行政人事",
+            "question": ["人力资源管理", "企业文化", "招聘", "培训", "薪酬福利"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }
+          },{
+            "name": "中级HRBP",
+            "question": ["HRBP经验", "招聘", "人才发展", "组织发展", "人力资源管理"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }
+          }
+        ],
+        "高级": [
+          {
+            "name": "高级人事专员",
+            "question": ["管理经验", "招聘", "绩效管理", "员工关系", "培训"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          },{
+            "name": "高级行政人事",
+            "question": ["人力资源管理", "企业文化", "招聘", "培训", "薪酬福利"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          },{
+            "name": "高级HRBP",
+            "question": ["HRBP经验", "招聘", "人才发展", "组织发展", "人力资源管理"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          }
+        ]
+      },
+      "产品经理": {
+        "初级": [
+          {
+            "name": "初级教育产品",
+            "question": ["产品设计", "用户研究", "数据分析", "市场调研", "Visio"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          },{
+            "name": "初级金融产品",
+            "question": ["金融产品", "财富管理", "移动端产品", "OA", "SAAS"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          },{
+            "name": "初级医学产品",
+            "question": ["产品规划", "项目管理", "医疗器械", "IVD", "产品管理"],
+            "city": {
+              "北京":["6k-8k", "6k"],
+              "杭州":["5k-7k", "5k"],
+              "广州":["4k-5k", "4k"],
+              "天津":["3k-4k", "3k"]
+            }
+          }
+        ],
+        "中级": [
+          {
+            "name": "中级教育产品",
+            "question": ["产品设计", "用户研究", "数据分析", "市场调研", "Visio"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }},
+          {
+            "name": "中级金融产品",
+            "question": ["金融产品", "财富管理", "移动端产品", "OA", "SAAS"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }},
+          {
+            "name": "中级医学产品",
+            "question": ["产品规划", "项目管理", "医疗器械", "IVD", "产品管理"],
+            "city": {
+              "北京":["12k-15k", "13k"],
+              "杭州":["10k-13k", "12k"],
+              "广州":["8k-12k", "10k"],
+              "天津":["7k-10k", "8k"]
+            }}
+        ],
+        "高级": [
+          {
+            "name": "高级教育产品",
+            "question": ["产品设计", "用户研究", "数据分析", "市场调研", "Visio"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          },
+          {
+            "name": "高级金融产品",
+            "question": ["金融产品", "财富管理", "移动端产品", "OA", "SAAS"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          },
+          {
+            "name": "高级医学产品",
+            "question": ["产品规划", "项目管理", "医疗器械", "IVD", "产品管理"],
+            "city": {
+              "北京":["16k-20k", "18k"],
+              "杭州":["15k-18k", "16k"],
+              "广州":["12k-15k", "14k"],
+              "天津":["10k-14k", "12k"]
+            }
+          }
+        ]
+      }
+    },
+    "beforeText": [
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "面试官提出问题，你只需要打出对应大于等于他问题等级的卡牌即可得分，加油！！！ 按A(B)键继续"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键开始游戏"
+      }
+    ],
+    "beforeTextIndex": 0,
+    "afterText": [
+      {
+        "name": "Hr",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "恭喜你通过了我们的面试，下周来入职吧！这两天快点找房子吧！"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "工作找到了，该找房了"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "用什么呢，反正不能用蛋壳，作者被坑过，随便找个吧"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "你随便找了一个软件开始了租房...按A(B)键进入租房"
+      }
+    ],
+    "afterTextIndex": 0,
+    "notPassText": [
+      {
+        "name": "邮件",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "面试未通过"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "按A(B)键重新设置求职意向"
+      }
+    ],
+    "passScore": 1
+  },
+  "houseDramaData": {
+    "beforeText": [
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)进行跳跃开始，加油！！！ 按A(B)键继续"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键开始游戏"
+      }
+    ],
+    "beforeTextIndex": 0,
+    "afterText": [
+      {
+        "name": "中介",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/woman.png",
+        "text": "不容易找到满意的房子了！这是合同你签署一下"
+      },
+      {
+        "name": "自己",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "房子找好了，去超市买点生活用品吧。明天就要上班"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "你买了很多东西回家，收拾到很晚休息了，Zzzzz"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键进入工作"
+      }
+    ],
+    "afterTextIndex": 0,
+    "notPassText": [
+      {
+        "name": "中介",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/woman.png",
+        "text": "你这也太难伺候了，你另请高明吧"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "按A键重新设置租房信息，按B键重新游戏"
+      }
+    ],
+    "rentHouse": {
+      "北京": {
+        "半小时内": 3500,
+        "1小时": 2500,
+        "1个半小时": 1500 ,
+        "更多": 1000
+      },
+      "杭州": {
+        "半小时内": 2500,
+        "1小时": 1800,
+        "1个半小时": 1000 ,
+        "更多": 600
+      },
+      "广州": {
+        "半小时内": 2000,
+        "1小时": 1500,
+        "1个半小时": 800 ,
+        "更多": 500
+      },
+      "天津": {
+        "半小时内": 1800,
+        "1小时": 1300,
+        "1个半小时": 700 ,
+        "更多": 400
+      }
+    },
+    "passScore": 0
+  },
+  "workDramaData": {
+    "beforeText": [
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "考验你记忆力的时候到了，找到相同的两张牌就可以消除，时间越短分数越高，加油！！！ 按A(B)键继续"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "A键不出，B键出牌，加油！！！ 按A(B)键继续"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/home/system.png",
+        "text": "按A(B)键开始游戏"
+      }
+    ],
+    "beforeTextIndex": 0,
+    "afterText": [
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "顺利完成今天的工作啦！"
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "一个月过去了..."
+      },
+      {
+        "name": "系统",
+        "image": "https://wondercvhackathon.oss-cn-beijing.aliyuncs.com/hackathon/identity/man.png",
+        "text": "今天是发工资的日子,快去看看你的工资条吧,按A(B)键查看工资条"
+      }
+    ],
+    "afterTextIndex": 0,
+    "passScore": 1
+  }
+}
